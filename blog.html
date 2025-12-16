@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — eConnect City</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-grid">
+    <a href="index.html" class="logo-link">
+      <img src="assets/Images/Home/logo-ecity.png" alt="eConnect City" class="logo-img" width="160" height="36">
+    </a>
+
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <span class="sep">|</span>
+      <a href="about.html" class="nav-link">À propos</a>
+      <span class="sep">|</span>
+      <a href="blog.html" class="nav-link is-active">Blog</a>
+    </nav>
+
+    <a href="#contact" class="btn-cta">Obtenir une soumission</a>
+  </div>
+</header>
+<section id="blog" class="section-blog py-5">
+  <div class="container">
+    <h1 class="section-title text-center mb-4">Nos blogs</h1>
+  </div>
+
+  <!-- Barre de filtres sticky -->
+  <div class="blog-filters sticky-top">
+    <div class="container">
+      <ul class="cat-pills" role="tablist" aria-label="Filtres d’articles">
+        <li><button class="cat-btn is-active" data-filter="all"><span class="dot"></span> Tous</button></li>
+        <li><button class="cat-btn" data-filter="site"><span class="dot" style="--dot:#A78BFA"></span> Création de site web</button></li>
+        <li><button class="cat-btn" data-filter="seo"><span class="dot" style="--dot:#22C55E"></span> SEO</button></li>
+        <li><button class="cat-btn" data-filter="ads"><span class="dot" style="--dot:#F59E0B"></span> Google Ads</button></li>
+        <li><button class="cat-btn" data-filter="social"><span class="dot" style="--dot:#3B82F6"></span> Réseaux sociaux</button></li>
+        <li><button class="cat-btn" data-filter="strategie"><span class="dot" style="--dot:#EF4444"></span> Stratégie</button></li>
+        <li><button class="cat-btn" data-filter="ecom"><span class="dot" style="--dot:#06B6D4"></span> E-commerce</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row g-4" id="blog-grid">
+      <!-- 1 -->
+      <article class="col-12 col-md-6 col-lg-4 blog-card" data-category="seo site">
+        <div class="card h-100">
+          <div class="ratio ratio-16x9">
+            <img src="assets/Images/Blog/blog-seo-checklist.jpg" class="card-img-top" alt="SEO local : la checklist essentielle pour PME">
+          </div>
+          <div class="card-body">
+            <span class="cat-chip" data-cat="seo"><span class="dot"></span> SEO</span>
+            <h3 class="h5 mt-2">SEO local : la checklist essentielle pour PME</h3>
+            <p class="card-text">Optimisez Google Business, pages locales et liens cités pour gagner des clients près de chez vous.</p>
+            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="col-12 col-md-6 col-lg-4 blog-card" data-category="strategie">
+        <div class="card h-100">
+          <div class="ratio ratio-16x9">
+            <img src="assets/Images/Blog/blog-7-avantages.jpg" class="card-img-top" alt="Les 7 avantages d’une stratégie numérique multicanale">
+          </div>
+          <div class="card-body">
+            <span class="cat-chip" data-cat="strategie"><span class="dot"></span> Stratégie</span>
+            <h3 class="h5 mt-2">Les 7 avantages d’une stratégie multicanale</h3>
+            <p class="card-text">Mieux répartir le budget, lisser les risques et améliorer la croissance durable.</p>
+            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="col-12 col-md-6 col-lg-4 blog-card" data-category="ads">
+        <div class="card h-100">
+          <div class="ratio ratio-16x9">
+            <img src="assets/Images/Blog/blog-erreurs-google-ads.jpg" class="card-img-top" alt="Google Ads : 7 erreurs qui plombent votre ROAS">
+          </div>
+          <div class="card-body">
+            <span class="cat-chip" data-cat="ads"><span class="dot"></span> Google Ads</span>
+            <h3 class="h5 mt-2">7 erreurs qui plombent votre ROAS</h3>
+            <p class="card-text">Ciblages trop larges, annonces floues, absence de tracking : corrigez ces pièges classiques.</p>
+            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="col-12 col-md-6 col-lg-4 blog-card d-none d-md-block" data-category="seo site">
+        <div class="card h-100">
+          <div class="ratio ratio-16x9">
+            <img src="assets/Images/Blog/blog-core-web-vitals.jpg" class="card-img-top" alt="Core Web Vitals : ce qui compte en 2025">
+          </div>
+          <div class="card-body">
+            <span class="cat-chip" data-cat="seo"><span class="dot"></span> SEO</span>
+            <h3 class="h5 mt-2">Core Web Vitals : ce qui compte en 2025</h3>
+            <p class="card-text">Vitesse, stabilité visuelle, interactivité : comment rester au vert sur vos pages clés.</p>
+            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="col-12 col-md-6 col-lg-4 blog-card d-none d-md-block" data-category="strategie site">
+        <div class="card h-100">
+          <div class="ratio ratio-16x9">
+            <img src="assets/Images/Blog/blog-ux-quick-wins.jpg" class="card-img-top" alt="UX : 12 quick wins pour lever les frictions">
+          </div>
+          <div class="card-body">
+            <span class="cat-chip" data-cat="strategie"><span class="dot"></span> Stratégie</span>
+            <h3 class="h5 mt-2">UX : 12 quick wins pour lever les frictions</h3>
+            <p class="card-text">Micro-copies, hiérarchie, formulaires : des gains rapides qui boostent la conversion.</p>
+            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="col-12 col-md-6 col-lg-4 blog-card d-none d-md-block" data-category="social strategie">
+        <div class="card h-100">
+          <div class="ratio ratio-16x9">
+            <img src="assets/Images/Blog/blog-calendrier-editorial-2025.jpg" class="card-img-top" alt="Calendrier éditorial 2025 : modèle et workflow">
+          </div>
+          <div class="card-body">
+            <span class="cat-chip" data-cat="social"><span class="dot"></span> Réseaux sociaux</span>
+            <h3 class="h5 mt-2">Calendrier éditorial 2025 : modèle & workflow</h3>
+            <p class="card-text">Plan, thèmes, fréquence et distribution multi-plateformes : passe en mode pro.</p>
+            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="btn-more" class="btn btn-brand">Charger plus</button>
+
+    </div>
+  </div>
+</section>
+<!-- CTA band — Blog -->
+<section class="cta-band cta-band--muted text-center">
+  <div class="container py-5">
+    <p class="cta-overline mb-1">Tu veux plus de ressources&nbsp;?</p>
+    <h2 class="h2 fw-bold mb-2">Discutons de votre projet</h2>
+    <a href="services.html" class="btn btn-brand btn-lg">Voir nos services</a>
+  </div>
+</section>
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Bloc branding + CTA -->
+      <div class="col-lg-4">
+        <div class="footer-box p-4 h-100 text-center text-lg-start">
+          <img class="footer-logo mb-3" src="assets/Images/Home/logo-ecity.png" alt="eConnect City" width="160" height="36">
+          <p class="fw-semibold mb-1">Agence web locale, croissance durable</p>
+          <p class="mb-3">Rejoignez les nombreux clients satisfaits qui ont choisi de travailler avec eConnect City.</p>
+          <a class="btn btn-brand btn-lg" href="#contact">Contactez-nous</a>
+        </div>
+      </div>
+
+      <!-- Liens utiles -->
+      <nav class="col-lg-4" aria-label="Liens utiles">
+        <div class="footer-box p-4 h-100">
+          <h3 class="h4 mb-3">Liens utiles</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a class="link-underline" href="index.html">Accueil</a></li>
+            <li><a class="link-underline" href="about.html">À propos</a></li>
+            <li><a class="link-underline" href="#services">Services</a></li>
+            <li><a class="link-underline" href="#blog">Blog</a></li>
+            <li><a class="link-underline" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Coordonnées + réseaux -->
+      <div class="col-lg-4">
+        <div class="footer-box p-4 h-100">
+          <ul class="list-unstyled footer-contact mb-3">
+            <li class="contact-item">
+              <img class="i" src="assets/Icones/phone.svg" alt="" width="20" height="20">
+              <span>514 961-5537</span>
+            </li>
+            <li class="contact-item">
+              <img class="i" src="assets/Icones/mail.svg" alt="" width="20" height="20">
+              <a class="link-underline" href="mailto:info@econnectcity.ca">info@econnectcity.ca</a>
+            </li>
+            <li class="contact-item">
+              <img class="i" src="assets/Icones/map pin.svg" alt="" width="20" height="20">
+              <span>618, boul. du Curé-Boivin, bur. 3, Boisbriand, QC J7G 2A7</span>
+            </li>
+          </ul>
+
+          <div class="footer-social d-flex align-items-center gap-3">
+            <a href="#" aria-label="Facebook"><img class="i" src="assets/Icones/facebook.svg" alt="" width="22" height="22"></a>
+            <a href="#" aria-label="Instagram"><img class="i" src="assets/Icones/instagram.svg" alt="" width="22" height="22"></a>
+            <a href="#" aria-label="LinkedIn"><img class="i" src="assets/Icones/linkedin.svg" alt="" width="22" height="22"></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Signature + mention pédagogique -->
+  <div class="signature">
+    <div class="container small py-3 d-flex flex-column flex-lg-row gap-2 align-items-center justify-content-between">
+      <div class="text-center text-lg-start">
+        <span>© 2025 eConnect City — Agence web à Boisbriand.</span>
+        <span class="d-block d-lg-inline ms-lg-2">
+          Projet fictif réalisé à des fins pédagogiques dans le cadre du cours Projet synthèse en design et intégration Web au Cégep Trois-Rivières.
+          Ce site n’est pas affilié à eConnect City.
+        </span>
+      </div>
+      <div class="text-center text-lg-end">
+        <a class="sig-link me-3" href="#">Politique de confidentialité</a>
+        <a class="sig-link" href="#">Termes &amp; conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
