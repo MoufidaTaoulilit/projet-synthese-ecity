@@ -7,6 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .is-hidden{display:none!important;}
+    .blog-filters{background:#fff;border-top:1px solid var(--line,#E5E7EB);border-bottom:1px solid var(--line,#E5E7EB);z-index:1020;}
+    .cat-pills{display:flex;gap:10px;flex-wrap:wrap;padding:10px 0;margin:0;list-style:none;}
+    .cat-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line,#E5E7EB);background:#fff;border-radius:999px;font-weight:600}
+    .cat-btn .dot{width:10px;height:10px;border-radius:50%;background:var(--dot,#9CA3AF);display:inline-block}
+    .cat-btn.is-active{border-color:var(--brand,#F25F5C);box-shadow:0 0 0 .15rem rgba(242,95,92,.15)}
+    .cat-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;font-size:12px;font-weight:600;border:1px solid var(--line,#E5E7EB);border-radius:999px;background:#fff}
+    .cat-chip .dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+    .cat-chip[data-cat="seo"]{color:#22C55E}
+    .cat-chip[data-cat="ads"]{color:#F59E0B}
+    .cat-chip[data-cat="social"]{color:#3B82F6}
+    .cat-chip[data-cat="strategie"]{color:#EF4444}
+    .section-blog .card{border:1px solid var(--line,#E5E7EB);border-radius:12px}
+    .section-blog .btn{border-radius:10px}
+    #btn-more{margin-top:8px}
+  </style>
 </head>
 <body>
 
@@ -15,7 +32,6 @@
     <a href="index.html" class="logo-link">
       <img src="assets/Images/Home/logo-ecity.png" alt="eConnect City" class="logo-img" width="160" height="36">
     </a>
-
     <nav class="main-nav" aria-label="Navigation principale">
       <a href="index.html" class="nav-link">Accueil</a>
       <span class="sep">|</span>
@@ -23,16 +39,15 @@
       <span class="sep">|</span>
       <a href="blog.html" class="nav-link is-active">Blog</a>
     </nav>
-
     <a href="#contact" class="btn-cta">Obtenir une soumission</a>
   </div>
 </header>
+
 <section id="blog" class="section-blog py-5">
   <div class="container">
     <h1 class="section-title text-center mb-4">Nos blogs</h1>
   </div>
 
-  <!-- Barre de filtres sticky -->
   <div class="blog-filters sticky-top">
     <div class="container">
       <ul class="cat-pills" role="tablist" aria-label="Filtres d’articles">
@@ -49,11 +64,10 @@
 
   <div class="container mt-4">
     <div class="row g-4" id="blog-grid">
-      <!-- 1 -->
       <article class="col-12 col-md-6 col-lg-4 blog-card" data-category="seo site">
         <div class="card h-100">
           <div class="ratio ratio-16x9">
-            <img src="assets/Images/Blog/blog-seo-checklist.jpg" class="card-img-top" alt="SEO local : la checklist essentielle pour PME">
+            <img src="assets/Images/Blog/blog-seo-checklist.jpg" class="card-img-top" alt="SEO local : la checklist essentielle pour PME" loading="lazy">
           </div>
           <div class="card-body">
             <span class="cat-chip" data-cat="seo"><span class="dot"></span> SEO</span>
@@ -64,26 +78,24 @@
         </div>
       </article>
 
-      <!-- 2 -->
       <article class="col-12 col-md-6 col-lg-4 blog-card" data-category="strategie">
         <div class="card h-100">
           <div class="ratio ratio-16x9">
-            <img src="assets/Images/Blog/blog-7-avantages.jpg" class="card-img-top" alt="Les 7 avantages d’une stratégie numérique multicanale">
+            <img src="assets/Images/Blog/blog-7-avantages.jpg" class="card-img-top" alt="Les 7 avantages d’une stratégie numérique multicanale" loading="lazy">
           </div>
           <div class="card-body">
             <span class="cat-chip" data-cat="strategie"><span class="dot"></span> Stratégie</span>
             <h3 class="h5 mt-2">Les 7 avantages d’une stratégie multicanale</h3>
             <p class="card-text">Mieux répartir le budget, lisser les risques et améliorer la croissance durable.</p>
-            <a href="#" class="btn btn-outline-dark">Lire l’article</a>
+            <a href="article-strategie-multicanale.html" class="btn btn-outline-dark">Lire l’article</a>
           </div>
         </div>
       </article>
 
-      <!-- 3 -->
       <article class="col-12 col-md-6 col-lg-4 blog-card" data-category="ads">
         <div class="card h-100">
           <div class="ratio ratio-16x9">
-            <img src="assets/Images/Blog/blog-erreurs-google-ads.jpg" class="card-img-top" alt="Google Ads : 7 erreurs qui plombent votre ROAS">
+            <img src="assets/Images/Blog/blog-erreurs-google-ads.jpg" class="card-img-top" alt="Google Ads : 7 erreurs qui plombent votre ROAS" loading="lazy">
           </div>
           <div class="card-body">
             <span class="cat-chip" data-cat="ads"><span class="dot"></span> Google Ads</span>
@@ -94,11 +106,10 @@
         </div>
       </article>
 
-      <!-- 4 -->
-      <article class="col-12 col-md-6 col-lg-4 blog-card d-none d-md-block" data-category="seo site">
+      <article class="col-12 col-md-6 col-lg-4 blog-card is-hidden" data-category="seo site">
         <div class="card h-100">
           <div class="ratio ratio-16x9">
-            <img src="assets/Images/Blog/blog-core-web-vitals.jpg" class="card-img-top" alt="Core Web Vitals : ce qui compte en 2025">
+            <img src="assets/Images/Blog/blog-core-web-vitals.jpg" class="card-img-top" alt="Core Web Vitals : ce qui compte en 2025" loading="lazy">
           </div>
           <div class="card-body">
             <span class="cat-chip" data-cat="seo"><span class="dot"></span> SEO</span>
@@ -109,11 +120,10 @@
         </div>
       </article>
 
-      <!-- 5 -->
-      <article class="col-12 col-md-6 col-lg-4 blog-card d-none d-md-block" data-category="strategie site">
+      <article class="col-12 col-md-6 col-lg-4 blog-card is-hidden" data-category="strategie site">
         <div class="card h-100">
           <div class="ratio ratio-16x9">
-            <img src="assets/Images/Blog/blog-ux-quick-wins.jpg" class="card-img-top" alt="UX : 12 quick wins pour lever les frictions">
+            <img src="assets/Images/Blog/blog-ux-quick-wins.jpg" class="card-img-top" alt="UX : 12 quick wins pour lever les frictions" loading="lazy">
           </div>
           <div class="card-body">
             <span class="cat-chip" data-cat="strategie"><span class="dot"></span> Stratégie</span>
@@ -124,15 +134,14 @@
         </div>
       </article>
 
-      <!-- 6 -->
-      <article class="col-12 col-md-6 col-lg-4 blog-card d-none d-md-block" data-category="social strategie">
+      <article class="col-12 col-md-6 col-lg-4 blog-card is-hidden" data-category="social strategie">
         <div class="card h-100">
           <div class="ratio ratio-16x9">
-            <img src="assets/Images/Blog/blog-calendrier-editorial-2025.jpg" class="card-img-top" alt="Calendrier éditorial 2025 : modèle et workflow">
+            <img src="assets/Images/Blog/blog-calendrier-editorial-2025.jpg" class="card-img-top" alt="Calendrier éditorial 2025 : modèle et workflow" loading="lazy">
           </div>
           <div class="card-body">
             <span class="cat-chip" data-cat="social"><span class="dot"></span> Réseaux sociaux</span>
-            <h3 class="h5 mt-2">Calendrier éditorial 2025 : modèle & workflow</h3>
+            <h3 class="h5 mt-2">Calendrier éditorial 2025 : modèle &amp; workflow</h3>
             <p class="card-text">Plan, thèmes, fréquence et distribution multi-plateformes : passe en mode pro.</p>
             <a href="#" class="btn btn-outline-dark">Lire l’article</a>
           </div>
@@ -142,22 +151,21 @@
 
     <div class="text-center mt-4">
       <button id="btn-more" class="btn btn-brand">Charger plus</button>
-
     </div>
   </div>
 </section>
-<!-- CTA band — Blog -->
+
 <section class="cta-band cta-band--muted text-center">
   <div class="container py-5">
-    <p class="cta-overline mb-1">Tu veux plus de ressources&nbsp;?</p>
+    <p class="cta-overline mb-1">Tu veux plus de ressources ?</p>
     <h2 class="h2 fw-bold mb-2">Discutons de votre projet</h2>
     <a href="services.html" class="btn btn-brand btn-lg">Voir nos services</a>
   </div>
 </section>
+
+<footer class="site-footer py-5 border-top">
   <div class="container">
     <div class="row g-4">
-
-      <!-- Bloc branding + CTA -->
       <div class="col-lg-4">
         <div class="footer-box p-4 h-100 text-center text-lg-start">
           <img class="footer-logo mb-3" src="assets/Images/Home/logo-ecity.png" alt="eConnect City" width="160" height="36">
@@ -167,7 +175,6 @@
         </div>
       </div>
 
-      <!-- Liens utiles -->
       <nav class="col-lg-4" aria-label="Liens utiles">
         <div class="footer-box p-4 h-100">
           <h3 class="h4 mb-3">Liens utiles</h3>
@@ -181,7 +188,6 @@
         </div>
       </nav>
 
-      <!-- Coordonnées + réseaux -->
       <div class="col-lg-4">
         <div class="footer-box p-4 h-100">
           <ul class="list-unstyled footer-contact mb-3">
@@ -198,7 +204,6 @@
               <span>618, boul. du Curé-Boivin, bur. 3, Boisbriand, QC J7G 2A7</span>
             </li>
           </ul>
-
           <div class="footer-social d-flex align-items-center gap-3">
             <a href="#" aria-label="Facebook"><img class="i" src="assets/Icones/facebook.svg" alt="" width="22" height="22"></a>
             <a href="#" aria-label="Instagram"><img class="i" src="assets/Icones/instagram.svg" alt="" width="22" height="22"></a>
@@ -206,11 +211,9 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- Signature + mention pédagogique -->
   <div class="signature">
     <div class="container small py-3 d-flex flex-column flex-lg-row gap-2 align-items-center justify-content-between">
       <div class="text-center text-lg-start">
@@ -227,3 +230,42 @@
     </div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const grid = document.getElementById('blog-grid');
+  const moreBtn = document.getElementById('btn-more');
+
+  function hiddenCards(){ return grid.querySelectorAll('.blog-card.is-hidden'); }
+
+  if(moreBtn){
+    moreBtn.addEventListener('click', () => {
+      hiddenCards().forEach(card => card.classList.remove('is-hidden'));
+      moreBtn.style.display = 'none';
+    });
+  }
+
+  const filterBtns = document.querySelectorAll('.cat-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      filterBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      grid.querySelectorAll('.blog-card').forEach(card => {
+        const cats = (card.dataset.category || '').split(' ');
+        const match = (f === 'all') || cats.includes(f);
+        card.style.display = match ? '' : 'none';
+        if (match && f !== 'all') card.classList.remove('is-hidden');
+      });
+
+      if (f === 'all' && hiddenCards().length) {
+        moreBtn.style.display = 'inline-block';
+      } else {
+        moreBtn.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>
